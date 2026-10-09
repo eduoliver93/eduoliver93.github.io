@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eduardo Oliveira - Web / UI Designer</title>
+    <style>
+        /* Reset básico e tipografia */
+        * {
+            margin: 0;
+            padding: 0; 
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Estilo do Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            /* Alterado de 50% para 12px para deixar a imagem quadrada com cantos arredondados */
+            border-radius: 12px; 
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo do Conteúdo Principal (Links) */
+        main {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        main p {
+            margin: 15px 0;
+        }
+
+        main a {
+            display: block;
+            text-decoration: none;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        main a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+        }
+    </style>
 </head>
-
 <body>
-    <h1> Joe Blogs</h1>
-    <h2> Welcome to my website </h2>
-    <p> I created the website to showcase of my recent some of my web design work </p>
-
-    <p> A Tale of Two Cities</p>
-
-    <p><a href="exercises/page-1.html"> A Tale of Two Cities</a></p>
-
+    <header>
+        <img src="developer.png" alt="Eduardo Oliveira: Web Designer">
+        <h1>Hi, Eduardo Oliveira</h1>
+        <h2>Web / DJ-PRODUCER</h2>
+    </header>
+    
+    <main>
+        <p><a href="exercises/page-1.html">A tale of two cities</a></p>
+        <p><a href="exercises/page-4.html">Vincent van Gogh</a></p> 
+        <p><a href="exercises/page-5.html">Irish Tourism</a></p>
+    </main>
 </body>
-
 </html>
