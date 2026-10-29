@@ -8,16 +8,90 @@
     <meta name="description" content="Ayrton's first website and HTML exercises.">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-        body { @apply text-center bg-green-100 }
-
-        a { @apply text-green-800 }
+        @layer base {
+            html { @apply scroll-smooth; }
+            body {
+                @apply text-center antialiased min-h-screen;
+                background: linear-gradient(160deg, #ecfdf5 0%, #d1fae5 45%, #a7f3d0 100%);
+                background-attachment: fixed;
+                font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+                color: #064e3b;
+            }
+            a {
+                @apply text-green-800 no-underline;
+                transition: color .2s ease, transform .2s ease;
+            }
+            a:hover { @apply text-emerald-600; }
+        }
 
         header {
             @apply pt-8 px-[9%] pb-[42px] md:py-[3%] md:px-[20%];
         }
+        header > h1 {
+            @apply font-extrabold tracking-tight;
+            font-size: clamp(2rem, 6vw, 3.25rem);
+            line-height: 1.1;
+            color: #065f46;
+            text-shadow: 0 2px 18px rgba(16, 185, 129, .25);
+        }
+        header > h2 {
+            @apply mt-3 font-medium;
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            color: #047857;
+            opacity: .85;
+        }
 
         section {
             @apply pt-8 px-[9%] pb-[42px] md:py-[3%] md:px-[20%];
+        }
+        section > p:first-child {
+            @apply mb-8;
+            font-size: 1.05rem;
+            color: #065f46;
+            opacity: .9;
+        }
+
+        /* cartão de vidro ao redor do conteúdo principal */
+        main {
+            @apply mx-auto my-6 max-w-3xl;
+            background: rgba(255, 255, 255, .55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, .7);
+            border-radius: 1.75rem;
+            box-shadow: 0 20px 45px -20px rgba(6, 95, 70, .35);
+        }
+
+        /* cada link vira uma pílula clicável */
+        section > p:not(:first-child) {
+            @apply mx-auto mb-3 max-w-md;
+            background: #ffffffcc;
+            border: 1px solid #d1fae5;
+            border-radius: 9999px;
+            padding: .7rem 1.25rem;
+            box-shadow: 0 4px 14px -6px rgba(16, 185, 129, .35);
+            transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+        }
+        section > p:not(:first-child):hover {
+            transform: translateY(-2px);
+            background: #ffffff;
+            border-color: #6ee7b7;
+            box-shadow: 0 12px 24px -10px rgba(16, 185, 129, .55);
+        }
+        section > p:not(:first-child) > a {
+            @apply block font-semibold;
+            font-size: .98rem;
+            letter-spacing: .01em;
+        }
+        section > p:not(:first-child) > a::after {
+            content: " →";
+            opacity: 0;
+            margin-left: .25rem;
+            transition: opacity .18s ease, margin-left .18s ease;
+        }
+        section > p:not(:first-child):hover > a::after {
+            opacity: .8;
+            margin-left: .5rem;
         }
     </style>
 </head>
