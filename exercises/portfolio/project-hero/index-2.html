@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero 2 | Eduardo Oliveira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      color: #1c1c1c;
+      line-height: 1.5
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .85rem 1.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      background: #1a73e8;
+      color: #fff;
+      transition: opacity .2s
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      opacity: .85
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 3px
+    }
+
+    header p {
+      font-size: 1.1rem;
+      max-width: 34rem;
+      margin: 1.2rem 0 2rem
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f7fb;
+      color: #10213a
+    }
+
+    header .text {
+      padding: 4rem 6vw
+    }
+
+    header h1 {
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.1
+    }
+
+    header h2 {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 400;
+      margin-top: 1rem
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      object-fit: cover;
+    }
+
+    @media (max-width:800px) {
+      header {
+        grid-template-columns: 1fr
+      }
+
+      header img {
+        min-height: 0;
+        height: 50vh;
+        order: -1
+      }
+
+      header .text {
+        padding: 3rem 1.5rem
+      }
+    }
+
+    /* Google Font */
+    header h1 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+    }
+
+    header h2 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+  <header>
+    <div class="text">
+      <h1>Putting the tricks into web analytics</h1>
+      <h2>Snazzy Analytics helps you boost your business impact.</h2>
+      <p>Supports all modern JavaScript frameworks, including React, Vue, and Svelte.</p>
+      <a class="btn btn-primary" href="#">Try it for free</a>
+    </div>
+    <img src="assets/img/analytics.png" alt="Analytics dashboard showing charts and metrics">
+  </header>
+</body>
+
+</html>

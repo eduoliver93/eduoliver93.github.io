@@ -1,0 +1,5 @@
+.section-selector-1 { background-color: var(--green-800) }
+.section-selector-1 { background-color: var(--green-800) }
+.section-selector-2 { background-color: var(--gray-200) }
+.section-selector-2 > p { color: var(--black-000) }
+.section-selector-2 > h2 { color: var(--black-000) }
